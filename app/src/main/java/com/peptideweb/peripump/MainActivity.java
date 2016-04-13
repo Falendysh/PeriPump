@@ -128,6 +128,13 @@ public class MainActivity extends Activity {
         masterControlStopButton = (Button) findViewById(R.id.master_control_stop_button);
         masterControlTextView = (TextView) findViewById(R.id.master_control_text_view);
 
+        masterControlMETButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Toast.makeText(getApplicationContext(),"general MET is working",Toast.LENGTH_SHORT).show();
+            }
+        });
+
 
 
         fragmentManager = getFragmentManager();
