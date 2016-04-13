@@ -1,0 +1,128 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:baselineAligned="false"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent" tools:context="com.peptideweb.peripump.PumpFragment"
+    android:background="@drawable/layout_background"
+    android:layout_margin="@dimen/layouts_margin"
+    android:layout_columnSpan="1"
+    android:layout_rowSpan="1"
+    android:weightSum="12"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/pump_index_view"
+        android:layout_width="fill_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:text="PUMP"
+        android:layout_gravity="center_horizontal|top"
+        android:gravity="center_horizontal|top"/>
+
+
+
+
+
+        <TextView
+            android:id="@+id/pump_text_view"
+            android:layout_width="fill_parent"
+            android:layout_height="0dp"
+            android:layout_weight="6"
+            android:text="120 \n ml/min"
+            android:textColor="@android:color/background_light"
+            android:background="@drawable/pumpbackground"
+            android:layout_margin="@dimen/button_margin"
+            android:layout_gravity="center_horizontal|center_vertical"
+            android:gravity="center_horizontal|center_vertical"/>
+
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_weight="2"
+        android:weightSum="9"
+        android:layout_height="0dp"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/button_flow_fragment"
+            android:layout_width="0dp"
+            android:layout_height="fill_parent"
+            android:layout_weight="3"
+            android:background="@drawable/start_stop_button_background"
+            android:layout_margin="@dimen/button_margin"
+            android:textSize="@dimen/button_text_size"
+            android:text="FLOW"/>
+        <Button
+            android:id="@+id/button_increase_fragment"
+            android:layout_width="0dp"
+            android:layout_height="fill_parent"
+            android:layout_weight="3"
+            android:background="@drawable/plus_minus_button_background"
+            android:layout_margin="@dimen/button_margin"
+            android:textSize="@dimen/plus_minus_text_size"
+            android:textStyle="bold"
+            android:text="+"/>
+        <Button
+            android:id="@+id/button_decrease_fragment"
+            android:layout_width="0dp"
+            android:layout_height="fill_parent"
+            android:layout_weight="3"
+            android:background="@drawable/plus_minus_button_background"
+            android:layout_margin="@dimen/button_margin"
+            android:textSize="@dimen/plus_minus_text_size"
+            android:textStyle="bold"
+            android:text="-"/>
+    </LinearLayout>
+
+
+    <ProgressBar
+        android:id="@+id/pump_progressbar"
+        android:layout_width="fill_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        style="@style/Base.Widget.AppCompat.ProgressBar.Horizontal"
+        android:layout_margin="@dimen/layouts_margin"
+        android:background="@android:color/holo_orange_light"
+        />
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="0dp"
+        android:layout_weight="2"
+        android:weightSum="3">
+
+        <Button
+            android:id="@+id/button_start_fragment"
+            android:layout_width="0dp"
+            android:layout_height="fill_parent"
+            android:layout_weight="1"
+            android:background="@drawable/start_stop_button_background"
+            android:layout_margin="@dimen/button_margin"
+            android:textSize="@dimen/button_text_size"
+            android:text="START"/>
+        <Button
+            android:id="@+id/button_stop_fragment"
+            android:layout_width="0dp"
+            android:layout_height="fill_parent"
+            android:layout_weight="1"
+            android:background="@drawable/start_stop_button_background"
+            android:layout_margin="@dimen/button_margin"
+            android:textSize="@dimen/button_text_size"
+            android:text="STOP"/>
+
+        <Button
+            android:id="@+id/button_set"
+            android:layout_width="0dp"
+            android:layout_height="fill_parent"
+            android:layout_weight="1"
+            android:background="@drawable/set_button_background"
+            android:layout_margin="@dimen/button_margin"
+            android:textSize="@dimen/button_text_size"
+            android:text="SET"/>
+
+    </LinearLayout>
+
+
+
+
+
+</LinearLayout>

@@ -1,0 +1,235 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent" android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:orientation="vertical"
+    android:weightSum="20"
+    android:background="@android:color/white"
+    android:paddingBottom="@dimen/activity_vertical_margin" tools:context=".MainActivity">
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:weightSum="8"
+        android:background="@drawable/head_layout_background"
+        android:orientation="horizontal"
+       android:paddingRight="@dimen/activity_horizontal_margin"
+        >
+
+        <TextView android:text="LP-control"
+            android:layout_width="0dp"
+            android:layout_height="fill_parent"
+            android:layout_weight="2"
+            android:textColor="@android:color/background_light"
+            android:textStyle="bold"
+            android:layout_gravity="center_vertical|center_horizontal"
+            android:gravity="center_vertical|center_horizontal"/>
+
+        <TextView android:text="Peristaltic Pump Driver"
+            android:layout_width="0dp"
+            android:textColor="@android:color/holo_orange_light"
+            android:textStyle="bold|italic"
+            android:layout_height="fill_parent"
+            android:layout_weight="4"
+            android:layout_gravity="center_vertical|center_horizontal"
+            android:gravity="center_vertical|center_horizontal"/>
+
+        <TextView android:text=""
+            android:layout_width="0dp"
+            android:layout_height="fill_parent"
+            android:layout_weight="1"
+            android:layout_gravity="center_vertical|right"
+            android:gravity="center_vertical|right"/>
+
+        <TextView
+            android:id="@+id/star_text"
+            android:text=""
+            android:padding="@dimen/activity_horizontal_margin"
+            android:background="@drawable/zirka"
+            android:layout_width="0dp"
+            android:layout_height="fill_parent"
+            android:layout_weight="1"
+            android:layout_gravity="center_vertical|right"
+            android:gravity="center_vertical|right"/>
+    </LinearLayout>
+    
+    
+    <LinearLayout
+        android:id="@+id/pumpsLayout"
+        android:layout_width="fill_parent"
+        android:layout_height="0dp"
+        android:layout_weight="12"
+        android:orientation="vertical"
+        android:weightSum="2">
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/master_control_layout"
+        android:layout_width="fill_parent"
+        android:layout_height="0dp"
+        android:layout_weight="2"
+        android:orientation="horizontal"
+        android:background="@drawable/layout_background"
+        android:layout_margin="@dimen/layouts_margin"
+        android:weightSum="5">
+
+        <TextView
+            android:id="@+id/master_control_text_view"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_gravity="center_horizontal|center_vertical"
+            android:gravity="center_horizontal|center_vertical"
+            android:textSize="@dimen/button_text_size"
+            android:text="MASTER CONTROL"/>
+
+        <Button
+            android:id="@+id/master_control_start_button"
+            android:layout_width="0dp"
+            android:layout_height="fill_parent"
+            android:layout_weight="1"
+            android:background="@drawable/start_stop_button_background"
+            android:layout_margin="@dimen/button_margin"
+            android:textSize="@dimen/button_text_size"
+            android:text="START"/>
+        <Button
+            android:id="@+id/master_control_stop_button"
+            android:layout_width="0dp"
+            android:layout_height="fill_parent"
+            android:layout_weight="1"
+            android:layout_margin="@dimen/button_margin"
+            android:background="@drawable/start_stop_button_background"
+            android:textSize="@dimen/button_text_size"
+            android:text="STOP"/>
+        <Button
+            android:id="@+id/master_control_detector_button"
+            android:layout_width="0dp"
+            android:layout_height="fill_parent"
+            android:layout_weight="1"
+            android:layout_margin="@dimen/button_margin"
+            android:background="@drawable/plus_minus_button_background"
+            android:textSize="@dimen/button_text_size"
+            android:text="Detector"/>
+        <Button
+            android:id="@+id/master_control_met_button"
+            android:layout_width="0dp"
+            android:layout_height="fill_parent"
+            android:layout_weight="1"
+            android:layout_margin="@dimen/button_margin"
+            android:background="@drawable/set_button_background"
+            android:textSize="@dimen/button_text_size"
+            android:text="MET"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/detector_linear_layout"
+        android:layout_width="fill_parent"
+        android:orientation="vertical"
+        android:background="@drawable/layout_background"
+        android:layout_margin="@dimen/layouts_margin"
+        android:layout_height="0dp"
+        android:weightSum="8"
+        android:layout_weight="5">
+        <TextView
+            android:id="@+id/detector_head_view"
+            android:layout_width="fill_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:layout_gravity="center_vertical|left"
+            android:gravity="center_vertical|left"
+            android:layout_marginLeft="@dimen/activity_horizontal_margin"
+            android:textSize="@dimen/button_text_size"
+            android:text="DETECTOR"/>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="0dp"
+            android:orientation="horizontal"
+            android:weightSum="10"
+
+            android:layout_weight="7">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="fill_parent"
+                android:layout_weight="2"
+                android:orientation="vertical"
+                android:weightSum="3">
+
+                <Button
+                    android:id="@+id/detector_start_button"
+                    android:layout_width="fill_parent"
+                    android:layout_height="0dp"
+                    android:text="START"
+                    android:background="@drawable/plus_minus_button_background"
+                    android:layout_margin="@dimen/button_margin"
+                    android:textSize="@dimen/button_text_size"
+                    android:layout_weight="1"/>
+                <Button
+                    android:id="@+id/detector_stop_button"
+                    android:layout_width="fill_parent"
+                    android:layout_height="0dp"
+                    android:text="STOP"
+                    android:background="@drawable/plus_minus_button_background"
+                    android:layout_margin="@dimen/button_margin"
+                    android:textSize="@dimen/button_text_size"
+                    android:layout_weight="1"/>
+                <Button
+                    android:id="@+id/detector_clear_button"
+                    android:layout_width="fill_parent"
+                    android:layout_height="0dp"
+                    android:text="CLEAR"
+                    android:background="@drawable/plus_minus_button_background"
+                    android:layout_margin="@dimen/button_margin"
+                    android:textSize="@dimen/button_text_size"
+                    android:layout_weight="1"/>
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/detector_text_view"
+                android:layout_width="0dp"
+                android:layout_height="fill_parent"
+                android:layout_weight="8"
+                android:background="@drawable/set_button_background"
+                android:layout_gravity="center_horizontal|center_vertical"
+                android:gravity="center_horizontal|center_vertical"
+                android:layout_margin="@dimen/button_margin"
+                android:text="Detector curve here"/>
+
+
+
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</LinearLayout>
